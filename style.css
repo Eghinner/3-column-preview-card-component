@@ -1,0 +1,125 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/*height: 100vh;*/
+	/*width: 100%;*/
+}
+
+:root {
+	--orange: hsl(31, 77%, 52%);
+	--cyan: hsl(184, 100%, 22%);
+	--dark_cyan: hsl(179, 100%, 13%);
+	--text: hsla(0, 0%, 100%, 0.75);
+	--white: hsl(0, 0%, 95%);
+}
+
+.container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 250px);
+}
+
+.content {
+	width: 80%;
+	margin: auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.first {
+	background: var(--orange);
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.seccond {
+	background: var(--cyan);
+
+}
+
+.third {
+	background: var(--dark_cyan);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+}
+
+img {
+	margin: 40px 0;
+	height: 40px;
+	width: 64px;
+}
+
+.h1 {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: 'Big Shoulders Display', cursive;
+	color: var(--white);
+	font-size: 35px;
+}
+
+.text {
+	margin: 20px 0;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.7;
+	color: var(--text);
+	font-family: 'Lexend Deca', sans-serif;
+}
+
+[class^="btn"]{
+	font-family: 'Lexend Deca', sans-serif;
+	padding: 10px;
+	width: 110px;
+	background-color: var(--white);
+	text-align: center;
+	border-radius: 20px;
+	margin: 25px 0;
+	border: 2px var(--white) solid;
+	cursor: pointer;
+}
+
+.btn1 {color: var(--orange);}
+.btn2 {color: var(--cyan);}
+.btn3 {color: var(--dark_cyan);}
+
+[class^="btn"]:hover {
+	background: transparent;
+	color: var(--white);
+}
+
+@media(max-width: 375px) {
+
+	.container {
+		height: auto;
+		width: 90%;
+		margin: 100px auto;
+	}
+	.grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, 500px);
+	}
+
+	.first {
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 0px;
+	}
+
+	.third {
+		border-bottom-left-radius: 10px;
+		border-top-right-radius: 0px;
+	}
+}
